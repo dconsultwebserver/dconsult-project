@@ -1,0 +1,60 @@
+.bg-body-tertiary.navbar.navbar-expand-lg.navbar-light{width:100vw;background-color: transparent !important;}
+.main-nav{position: fixed;top: 0;left: 0;z-index: 5000;color: aliceblue;}
+.main-nav .bg-body-tertiary{background-color: transparent !important;    padding: 0;}
+.main-nav .bg-body-tertiary .container.scrolling{background-color: transparent!important; color:#fff}
+.navbar-nav a{ text-decoration: none; font-size: .8rem; font-weight: 400;letter-spacing: 0.03rem;}
+.navbar-nav .link{margin-right: .5rem;}
+.activeNav{color:#ffffff !important;border-bottom: 3px solid #ffffff;font-weight: bold;}
+.iactiveNav{color:#E7B905 !important;border-bottom: 2px solid #E7B905 !important;font-weight: bold;}
+.contact-btn{background: #008BC2;color-scheme: #fff !important;padding: .5rem 1rem; width: max-content;margin: 0 1rem;}
+.nav-logo{height: auto !important;width: 20rem !important;padding: 10px 0;}
+/* inner */
+#financial-sectors-dropdown{display:flex ; align-items: center; }
+.ilink {
+    position: relative;
+    text-decoration: none;
+    color: #000 ;
+    font-weight: 500 !important;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .ilink:hover {
+    color: #000; /* Set your desired text color on hover */
+  }
+  
+  .ilink:before,
+  .ilink:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #E7B905; /* Set your desired border color */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .ilink:before {
+    left: 0;
+    bottom: 0;
+  }
+  
+  .ilink:after {
+    right: 0;
+    bottom: 0;
+  }
+  .innerNavC{background: #fff !important;}
+  .ilink:hover:before,
+  .ilink:hover:after {
+    width: 100%;
+  }
+@media (min-width: 1000px){
+  .innerNavC{box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;}
+    .main-nav .bg-body-tertiary .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {background: transparent;padding:0 2rem 0 3.3rem;  margin: 0;min-width: 100vw;} ;}
+@media(max-width:500px){
+    .navbar-nav a{ margin: .8rem 0;}
+    .main-nav .bg-body-tertiary .container{background: transparent}
+    .main-nav .bg-body-tertiary{background:transparent}
+    .contact-btn{margin: 1rem 0;}
+.nav-logo{height: auto !important;width: 16.5rem !important;padding: 10px 0;}
+
+}

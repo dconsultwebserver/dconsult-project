@@ -1,0 +1,84 @@
+.section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.section> img{
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+.section video{
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+.copy {
+  position: absolute;
+  bottom: 20%;
+  left: 3.5%;
+  z-index: 10;
+width: 45rem;
+}
+.copy h1 {
+  z-index: 550;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 2.7rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: .09rem;
+  /* @media (min-width: 768px) {
+    font-size: 3rem;
+  } */
+}
+.downarrow {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: url("/images/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+}
+.copy button{display: flex; align-items: center; gap: 1.2rem; margin-top: 2rem;}
+.image-bg{visibility: hidden;}
+.home-link-container{ position: absolute;z-index: 10;display: flex;justify-content: center; align-items: center; gap: 3rem;top: 45%;width: 100%;}
+
+/* .home-link-container .col-4{ padding: 0;} */
+.home-link{border-radius: 6.25rem;
+  border-right: 1px solid #4487B6;
+  border-left: 1px solid #4487B6;
+  background: rgba(9, 16, 24, 0.50);
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);display: flex;flex-direction: column; justify-content: center;align-items: center;padding: .5rem;cursor: pointer;transition: 0.5s ease-out; width: 22rem;padding: 1rem;}
+  .home-link:hover {
+    background: #E7B905;
+    border: 0;
+  }
+  .home-link:hover > p {
+    color: #fff;
+  }
+  #background-video{opacity: 0.4 !important;}
+  .home-link p{font-size: 1rem; margin: 0;color: #54D6FF; text-transform: uppercase;transition: 0.5s ease-out;}
+  .home-link h5{font-size: 1.4rem;color: #FFF; }
+@media(max-width:500px){
+  .home-link:hover {
+    background: none !important;
+    border: 0;
+  }
+  .home-link-container{ width: 15.5rem !important;left: 15%;top:43%;display: block;}
+  .home-link{display: block;background: none;border: 0;padding: .3rem;width: max-content;}
+  .copy button{margin-left: 1rem;}
+  .copy{bottom: 15%;}
+}
