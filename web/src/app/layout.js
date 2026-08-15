@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Script from 'next/script';
 import { Inter } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css'
@@ -7,8 +8,14 @@ import './fundRising/fund.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Professional Liability Insurance Mumbai | Unlisted Stocks & Construction Finance Mumbai | Commercial General, Art & Product Liability Insurance Mumbai - Dhumavati Consulting LLP',
-  description: 'Dhumavati Consulting LLP offers comprehensive insurance solutions in Mumbai, covering Professional liability insurance, unlisted stocks, construction finance, art insurance & commercial general liability.',
+  title: 'Machinery Loans Mumbai | Acquisition Finance & ECB Mumbai - Dhumavati Consulting LLP',
+  description: 'Dhumavati Consulting LLP offers Machinery Loans, Acquisition Finance, and ECB consulting in Mumbai to help businesses secure the right funding.',
+  verification: {
+    google: '7wMzEd5dleljQIHvMYQWBrBZIInI2VDW4krVu-5Ra8k',
+  },
+  alternates: {
+    canonical: 'https://dconsult.in/',
+  },
 }
 
 export default function RootLayout({ children }) {
@@ -18,6 +25,10 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href="/images/FavIcon.svg" type="image/svg" />
       </head>
       <body className={inter.className}>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-TX8B62P94Y" strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-TX8B62P94Y');`}
+        </Script>
         {children}
         {/* Hidden links for SEO/spider crawling - no visual space */}
         <div style={{ display: 'none' }}>
