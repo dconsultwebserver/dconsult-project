@@ -126,8 +126,12 @@ export default function Mysection({
         </div>
         {linkSection && <div className=" home-link-container">
           {/* <div className="link-box"><div className="home-link" ><p>For Portraits</p><h5>Siddhiart.in</h5></div></div> */}
-          <div className="link-box"><div className="home-link" onClick={handleLink2Click}><p>M & A in healthcare sector</p><h5>Hospitalsforsale.biz</h5></div></div>
-          <div className="link-box"><div className="home-link" onClick={handleLink3Click}><p>M & A in hospitality sector</p><h5>Dhotels24.com</h5></div></div>
+          {/* <div className="link-box"><div className="home-link" onClick={handleLink2Click}><p>M & A in healthcare sector</p><h5>Hospitalsforsale.biz</h5></div></div>
+          <div className="link-box"><div className="home-link" onClick={handleLink3Click}><p>M & A in hospitality sector</p><h5>Dhotels24.com</h5></div></div> */}
+          <div className="link-box"><div className="home-link" onClick={()=>{router.push('/terms&condition')}}><p>Terms & Conditions</p><h5>Terms & Conditions.</h5></div></div>
+          <div className="link-box"><div className="home-link" onClick={()=>{router.push('/privacyPolicy')}}><p>Privacy Policy</p><h5>Privacy Policy</h5></div></div>
+          <div className="link-box"><div className="home-link" onClick={()=>{router.push('/disclaimers')}}><p>Disclaimers</p><h5>Disclaimers</h5></div></div>
+          <div className="link-box"><div className="home-link" onClick={()=>{router.push('/cookiesPolicy')}}><p>Cookies Policy</p><h5>Cookies Policy</h5></div></div>
         </div>}
         
         {image &&<Image src={image} layout={`fill`} ref={imageRef} className="image-bg" alt='image'/>}

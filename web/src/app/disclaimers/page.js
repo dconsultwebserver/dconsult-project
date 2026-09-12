@@ -51,7 +51,7 @@ function page() {
         <div ref={containerRef} className='page-content'>
             {windowWidth <500 ? (<ClosiongNav/>) : (<InnerNav/>) }
 
-            <section class="gallery" data-scroll-section >
+            <section className="gallery" data-scroll-section >
                 {/* <div className="col-12 about-img-c ">
                     <div className="about-img center"  style={{
             backgroundImage: `url(${data && data.banner.url})`,
@@ -60,15 +60,15 @@ function page() {
                 <div className="row posotion-container" >
                     <div className="col-12 about-left-content bg" style={{ marginTop: '5rem' }}>
                         <div className='title'>Disclaimers</div>
-                        <div className='heading top-heading'>SIDDHIVINAYAK CONSULTANCY - DISCLAIMERS</div>
+                        <div className='heading top-heading'>Dhumavati Consulting LLP - DISCLAIMERS</div>
                         <div className='p-container' >
-                            <p>This Privacy Policy outlines how Siddhivinayak Consultancy (referred to as "we," "our," or "us") collects, uses, discloses, and protects your personal information when you use our website. By accessing and using the Siddhivinayak Consultancy website, you consent to the practices described in this Privacy Policy.</p>
+                            <p>This Privacy Policy outlines how Dhumavati Consulting LLP (referred to as "we," "our," or "us") collects, uses, discloses, and protects your personal information when you use our website. By accessing and using the Dhumavati Consulting LLP website, you consent to the practices described in this Privacy Policy.</p>
                             <p><b>1. NO PROFESSIONAL ADVICE</b></p>
 <p>The content on our website is not intended to constitute professional advice. It is important to seek the advice of qualified professionals for specific information or assistance related to property dealings or any other matters.</p>
                             <p><b>2. PROPERTY LISTINGS</b></p>
 <p>We strive to provide accurate and up-to-date information on property listings. However, we do not warrant or represent that the information on our website is error-free, and we are not responsible for any inaccuracies, omissions, or misrepresentations.</p>
                             <p><b>3. USE AT YOUR OWN RISK</b></p>
-                            <p>Your use of the Siddhivinayak Consultancy website is at your own risk. We are not liable for any direct, indirect, incidental, consequential, or punitive damages arising out of your access to, or use of, the website.</p>
+                            <p>Your use of the Dhumavati Consulting LLP website is at your own risk. We are not liable for any direct, indirect, incidental, consequential, or punitive damages arising out of your access to, or use of, the website.</p>
                             <p><b>4. THIRD-PARTY LINKS</b></p>
                             <p>Our website may contain links to third-party websites. These links are provided for your convenience, and we do not endorse or assume responsibility for the content or practices of linked websites. We encourage you to review the privacy policies and terms of use of any third-party sites.</p>
                             <p><b>5. CHANGES TO DISCLAIMER</b></p>

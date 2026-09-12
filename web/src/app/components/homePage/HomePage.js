@@ -2,6 +2,8 @@
 import { useRef, useEffect , useState} from "react";
 import Mysection from "../scrollSection/Mysection";
 import client from "@/app/sanity/client";
+import DisclaimerPopup from "../DisclaimerPopup/DisclaimerPopup";
+
 export default function Home() {
   const [data,setData]=useState()
   useEffect(() => {
@@ -50,6 +52,7 @@ export default function Home() {
 
   return (
     <div>
+      <DisclaimerPopup/>
       <div className='Scroll-container sectionContainer'>
         <div className='dot-btns'>
           <button onClick={() => scrollTo(section1)}></button>

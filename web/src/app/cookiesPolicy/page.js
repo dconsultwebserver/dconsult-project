@@ -51,7 +51,7 @@ function page() {
         <div ref={containerRef} className='page-content'>
             {windowWidth <500 ? (<ClosiongNav/>) : (<InnerNav/>) }
 
-            <section class="gallery" data-scroll-section >
+            <section className="gallery" data-scroll-section >
                 {/* <div className="col-12 about-img-c ">
                     <div className="about-img center"  style={{
             backgroundImage: `url(${data && data.banner.url})`,
@@ -60,7 +60,7 @@ function page() {
                 <div className="row posotion-container" >
                     <div className="col-12 about-left-content bg" style={{ marginTop: '5rem' }}>
                         <div className='title'>Cookies Policy</div>
-                        <div className='heading top-heading'>SIDDHIVINAYAK CONSULTANCY - COOKIES POLICY</div>
+                        <div className='heading top-heading'>Dhumavati Consulting LLP - COOKIES POLICY</div>
                         <div className='p-container' >
                         <p><b>1. TYPES OF COOKIES WE USE</b></p><p>a. Essential Cookies: These cookies are necessary for the website to function properly. They enable basic functions such as page navigation and access to secure areas of the website.</p>
                         <p>b. Analytical/Performance Cookies: These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. They assist in improving website functionality and user experience.</p>

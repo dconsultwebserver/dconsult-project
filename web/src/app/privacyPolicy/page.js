@@ -51,13 +51,13 @@ function page() {
         <div ref={containerRef} className='page-content'>
             {windowWidth <500 ? (<ClosiongNav/>) : (<InnerNav/>) }
 
-            <section class="gallery" data-scroll-section >
+            <section className="gallery" data-scroll-section >
                 <div className="row posotion-container" >
                     <div className="col-12 about-left-content bg" style={{ marginTop: '5rem' }}>
                         <div className='title'>Privacy Policy</div>
-                        <div className='heading top-heading'>SIDDHIVINAYAK CONSULTANCY - PRIVACY POLICY</div>
+                        <div className='heading top-heading'>Dhumavati Consulting LLP - PRIVACY POLICY</div>
                         <div className='p-container' >
-                            <p>This Privacy Policy outlines how Siddhivinayak Consultancy (referred to as "we," "our," or "us") collects, uses, discloses, and protects your personal information when you use our website. By accessing and using the Siddhivinayak Consultancy website, you consent to the practices described in this Privacy Policy.</p>
+                            <p>This Privacy Policy outlines how Dhumavati Consulting LLP (referred to as "we," "our," or "us") collects, uses, discloses, and protects your personal information when you use our website. By accessing and using the Dhumavati Consulting LLP website, you consent to the practices described in this Privacy Policy.</p>
                             <p><b>1. INFORMATION WE COLLECT</b></p>
                             <p>a. Personal Information: We may collect personal information such as your name, email address, phone number, and other contact details when you voluntarily provide them through our website forms or other communication channels.</p>
                             <p>b. Usage Information: We collect information about your interactions with our website, including the pages you visit, the links you click, and the duration of your visit. This information helps us improve our services and user experience.</p>

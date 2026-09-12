@@ -39,6 +39,8 @@ export default function RootLayout({ children }) {
           <a href="/ecb" className="float" target="_blank">e</a>
           <a href="/privacyPolicy" className="float" target="_blank">f</a>
           <a href="/terms&condition" className="float" target="_blank">g</a>
+          <a href="/disclaimers" className="float" target="_blank">h</a>
+          <a href="/cookiesPolicy" className="float" target="_blank">i</a>
         </div>
       </body>
     </html>
