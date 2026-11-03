@@ -44,19 +44,19 @@ const router=useRouter()
                         <h6 style={{ marginTop: '1.2rem', textAlign: 'center' }}>Please fill the form to know more</h6>
                         <div className="row">
                           <div className='input-contact-property col-6' >
-                            <Image src={profile} width={35} height={20} alt='image' />
+                            <Image src={profile} width={35} height={20} alt='' />
                             <input type="text" placeholder='Name' name='from_name' autoComplete='off' required />
                           </div>
                           <div className='input-contact-property col-6'>
-                            <Image src={gmail} width={35} height={16} alt='image' className='mail-height' />
+                            <Image src={gmail} width={35} height={16} alt='' className='mail-height' />
                             <input type="email" placeholder='Email' name='email' autoComplete='off' required />
                           </div>
                           <div className='input-contact-property col-6'>
-                            <Image src={mobile} width={35} height={20} alt='image' />
+                            <Image src={mobile} width={35} height={20} alt='' />
                             <input type="number" placeholder='Phone No' name='phone' autoComplete='off' required />
                           </div>
                           <div className='input-contact-property col-6'>
-                            <Image src={office} width={35} height={20} alt='image' />
+                            <Image src={office} width={35} height={20} alt='' />
                             <input type="text" placeholder='Message' name='message' autoComplete='off' required />
                           </div>
                         </div>

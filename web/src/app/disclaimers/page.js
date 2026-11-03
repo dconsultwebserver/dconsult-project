@@ -59,7 +59,7 @@ function page() {
                 </div> */}
                 <div className="row posotion-container" >
                     <div className="col-12 about-left-content bg" style={{ marginTop: '5rem' }}>
-                        <div className='title'>Disclaimers</div>
+                        <h1 className='title'>Disclaimers</h1>
                         <div className='heading top-heading'>Dhumavati Consulting LLP - DISCLAIMERS</div>
                         <div className='p-container' >
                             <p>This Privacy Policy outlines how Dhumavati Consulting LLP (referred to as "we," "our," or "us") collects, uses, discloses, and protects your personal information when you use our website. By accessing and using the Dhumavati Consulting LLP website, you consent to the practices described in this Privacy Policy.</p>

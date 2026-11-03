@@ -42,33 +42,33 @@ export default function Footer() {
         <>
         <div className="question center">
             <h3 className="heading res-h">Have more questions? Reach out to us at</h3>
-            <div className="c-at"><div onClick={handleCall} style={{cursor:'pointer'}}><Image src={yp} alt='img'height={22} width={22} /> <p>+91 - 8655811111</p> </div>
-            <div c style={{cursor:'pointer'}} onClick={handleEmail}><Image src={ye} alt='img' height={22} width={22}/> <p>d@dconsult.in</p> </div></div>
+            <div className="c-at"><div onClick={handleCall} style={{cursor:'pointer'}}><Image src={yp} alt=''height={22} width={22} /> <p>+91 - 8655811111</p> </div>
+            <div c style={{cursor:'pointer'}} onClick={handleEmail}><Image src={ye} alt='' height={22} width={22}/> <p>d@dconsult.in</p> </div></div>
             <p className='bp'>Time : 10:00 AM to 7:00 PM</p>
         </div>
             <div className={`call-back ${(pathname === '/privateEqity/' || pathname === '/contact/' || pathname === '/demateAccount/' || pathname === '/dubaiProperty/' || pathname === '/billDiscounting/' || pathname === '/aboutUs/') ? 'm-b-4' : ''}`} >
                 {/* <div className='call-back-in'>
                     <div className="call-top">
                         <h3 className='heading'>REQUEST CALL BACK</h3>
-                        <Image src={line} alt='line' />
+                        <Image src={line} alt='' />
                         <p>Would you like to speak to one of our financial advisers over the phone? Just submit your details and we'll be in touch shortly. You can also email us if you would prefer.</p>
                     </div>
                     <div className="form-bot">
                         <form ref={form} onSubmit={sendEmail} className='row input-section'>
                             <div className="input-fcontainer col-6">
-                                <Image src={profile} alt='image' className='wIcon' />
+                                <Image src={profile} alt='' className='wIcon' />
                                 <input type="text" placeholder='Name' name='from_name' autoComplete='off' required />
                             </div>
                             <div className="input-fcontainer col-6">
-                                <Image src={bmail} alt='image' className='wIcon' />
+                                <Image src={bmail} alt='' className='wIcon' />
                                 <input type="email" placeholder='Email' name='email' autoComplete='off' required />
                             </div>
                             <div className="input-fcontainer col-6" >
-                                <Image src={mobile} alt='image' className='wIcon' />
+                                <Image src={mobile} alt='' className='wIcon' />
                                 <input type="number" placeholder='Phone No' name='phone' autoComplete='off' required />
                             </div>
                             <div className="input-fcontainer col-6" >
-                                <Image src={office} alt='image' className='wIcon' height={25} />
+                                <Image src={office} alt='' className='wIcon' height={25} />
                                 <select
                                     id="messageType"
                                     name="querry"
@@ -93,7 +93,7 @@ export default function Footer() {
                         <div className='footer-container'>
                             <div className="row footer-row" >
                                 <div className='col-4'>
-                                    <Image src={logo} width={300} height={300} alt='logo' className='f-logo'/>
+                                    <Image src={logo} width={300} height={300} alt='Dhumavati Consulting LLP logo' className='f-logo'/>
                                 </div>
                                 <div className='col-4'>
                                     <p onClick={()=>{router.push('/terms&condition')}} >Terms & Conditions.</p>

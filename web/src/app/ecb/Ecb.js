@@ -101,7 +101,7 @@ function ECBPage() {
                     <div className="col-12 fund-page-content" style={{ paddingTop: '5rem' }}>
 
                         {/* Title */}
-                        <h1 className="page-main-title">EXTERNAL COMMERCIAL BORROWINGS (ECB)</h1>
+                        <h2 className="page-main-title">EXTERNAL COMMERCIAL BORROWINGS (ECB)</h2>
 
                         {/* Hero Section */}
                         <div className="about-section">

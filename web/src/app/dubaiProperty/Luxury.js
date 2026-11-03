@@ -27,11 +27,11 @@ function page() {
 
     const handleRoute = (slug) => {
         localStorage.setItem('slug', slug);
-        router.push('/dubaiProperty/properties');
+        router.push(`/dubaiProperty/properties/${slug}/`);
     };
     const handleNews = (slug) => {
         localStorage.setItem('news', slug);
-        router.push('/dubaiProperty/newses');
+        router.push(`/dubaiProperty/newses/${slug}/`);
     };
     useEffect(() => {
         let scroll;
@@ -161,7 +161,7 @@ function page() {
                                 <div className='col-3 lux-property' onClick={() => handleRoute(item.slug.current)} key={index} style={{ cursor: 'pointer' }}>
                                     <div className="property-card" >
                                         <div className="image-property">
-                                            {item.mainImage && <Image src={item.mainImage.asset.url} width={500} height={200} alt='image' />}
+                                            {item.mainImage && <Image src={item.mainImage.asset.url} width={500} height={200} alt={item.title || 'Dubai property'} />}
 
                                         </div>
                                         <h3>{item.title}</h3>
@@ -172,7 +172,7 @@ function page() {
                                         <p className='p-data'>{item.description.length > 70 ? `${item.description.substring(0, 100)}...` : item.description}</p>}
                                         <div className='bot-red-property'>
                                             <p>View Details</p>
-                                            <Image src={arrow} alt='arrow' />
+                                            <Image src={arrow} alt='' />
                                         </div>
                                     </div>
                                 </div>
@@ -195,7 +195,7 @@ function page() {
                                 <div className='col-3 lux-property' onClick={() => handleNews(item.slug.current)} key={index} style={{ cursor: 'pointer' }}>
                                     <div className="property-card" >
                                         <div className="image-property">
-                                            {item.mainImage && <Image src={item.mainImage.asset.url} width={500} height={200} alt='image' />}
+                                            {item.mainImage && <Image src={item.mainImage.asset.url} width={500} height={200} alt={item.title || 'Dubai property'} />}
 
                                         </div>
                                     </div>
@@ -208,7 +208,7 @@ function page() {
                                             <p>Date: {item.date}</p>
                                         </div>
 
-                                        <div className='bot-red-property'> <p>View Details </p> <Image src={arrow} alt='arrow' /> </div>
+                                        <div className='bot-red-property'> <p>View Details </p> <Image src={arrow} alt='' /> </div>
                                     </div>
                                 </div>
                             ))}

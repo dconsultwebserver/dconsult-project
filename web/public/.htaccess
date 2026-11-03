@@ -1,0 +1,14 @@
+# Show the site's own 404 page (with a real 404 status) for missing URLs
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # www.dconsult.in -> dconsult.in (http -> https is already handled by the host)
+  RewriteCond %{HTTP_HOST} ^www\.dconsult\.in$ [NC]
+  RewriteRule ^(.*)$ https://dconsult.in/$1 [L,R=301]
+
+  # /index.html and /page/index.html -> clean URL (only when typed, not for internal lookups)
+  RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?]
+  RewriteRule ^(.*/)?index\.html$ /$1 [L,R=301]
+</IfModule>

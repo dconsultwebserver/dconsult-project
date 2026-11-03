@@ -131,7 +131,7 @@ function AcquisitionFinancing() {
                     <div className="col-12 fund-page-content" style={{ paddingTop: '5rem' }}>
 
                         {/* Title */}
-                        <h1 className="page-main-title">ACQUISITION FINANCING</h1>
+                        <h2 className="page-main-title">ACQUISITION FINANCING</h2>
 
                         {/* Subtitle/Hero Text */}
                         <div className="about-section">

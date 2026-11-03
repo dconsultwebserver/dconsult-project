@@ -23,7 +23,7 @@ function MainNav() {
       <Navbar collapseOnSelect expand="lg" className='bg-body-tertiary'>
         <Container>
           <Navbar.Brand href="/">
-            <Image src={logo} height={70} width={200} className='nav-logo' alt='image'/>
+            <Image src={logo} height={70} width={200} className='nav-logo' alt='Dhumavati Consulting LLP logo'/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

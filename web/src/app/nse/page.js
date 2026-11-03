@@ -148,7 +148,7 @@ function NSEUnlistedStocks() {
                     <div className="col-12 fund-page-content" style={{ paddingTop: '5rem' }}>
 
                         {/* Title */}
-                        <h1 className="page-main-title">NSE UNLISTED STOCKS</h1>
+                        <h2 className="page-main-title">NSE UNLISTED STOCKS</h2>
 
                         {/* Fundamentals Section */}
                         <div className="fundamentals-section">

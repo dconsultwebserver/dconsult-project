@@ -93,7 +93,7 @@ function MachineryLoans() {
                     <div className="col-12 fund-page-content" style={{ paddingTop: '5rem' }}>
 
                         {/* Title */}
-                        <h1 className="page-main-title mb-4">MACHINERY LOANS</h1>
+                        <h2 className="page-main-title mb-4">MACHINERY LOANS</h2>
 
                         {/* Hero Description */}
                         <div className="about-section">

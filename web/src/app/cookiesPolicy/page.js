@@ -59,7 +59,7 @@ function page() {
                 </div> */}
                 <div className="row posotion-container" >
                     <div className="col-12 about-left-content bg" style={{ marginTop: '5rem' }}>
-                        <div className='title'>Cookies Policy</div>
+                        <h1 className='title'>Cookies Policy</h1>
                         <div className='heading top-heading'>Dhumavati Consulting LLP - COOKIES POLICY</div>
                         <div className='p-container' >
                         <p><b>1. TYPES OF COOKIES WE USE</b></p><p>a. Essential Cookies: These cookies are necessary for the website to function properly. They enable basic functions such as page navigation and access to secure areas of the website.</p>

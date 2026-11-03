@@ -128,9 +128,9 @@ Your business deserves the best protection, and we’re here to deliver just tha
                     <div className="col-10 about-left-content bot-left p0 bg">
                         <div className='p-container' >
                             <div className="blue-container row " data-scroll data-scroll-className="appear" data-scroll-repeat="true" style={{ marginTop: '5rem' }}>
-                                <div className='col-3 center res-100'> <Image src={owner1} height={170} width={170} className='ceo-img'  alt='image'/> </div>
+                                <div className='col-3 center res-100'> <Image src={owner1} height={170} width={170} className='ceo-img'  alt='Manas Survee, CEO of Dhumavati Consulting LLP'/> </div>
                                 <div className='col-8 blue-p' >
-                                    <div className='company-person'> <h6 >Manas Survee </h6><Image src={link} height={30} width={30}  alt='image'/></div>
+                                    <div className='company-person'> <h6 >Manas Survee </h6><Image src={link} height={30} width={30}  alt='LinkedIn'/></div>
                                     
                                     <p className='position'>CEO of Dhumavati Consulting LLP</p>
                                     <p>He has over 16 years of experience in Real Estate and Finance. The years have added to the expertise he has in the field. In his time of work, he has handled various large projects benefitting groups of people at the same time. Through this platform, he aims to facilitate the exchange of opportunities between investors and buyers of hospitals. He is a delight to work with and happens to be great at managing people and closing deals!</p>
@@ -139,7 +139,7 @@ Your business deserves the best protection, and we’re here to deliver just tha
                         </div>
                     </div>
                     <div className='center'>
-                        <Image src={reach} height={500} width={800} className='auto-img' alt='image'/>
+                        <Image src={reach} height={500} width={800} className='auto-img' alt='Reach out to Dhumavati Consulting LLP'/>
                     </div>
                 </div>
                 </div>

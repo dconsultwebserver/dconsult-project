@@ -59,7 +59,7 @@ function page() {
                 </div> */}
                 <div className="row posotion-container" >
                     <div className="col-12 about-left-content bg" style={{ marginTop: '5rem' }}>
-                        <div className='title'>Terms & Condition</div>
+                        <h1 className='title'>Terms & Condition</h1>
                         <div className='heading top-heading'>Dhumavati Consulting LLP - TERMS AND CONDITIONS</div>
                         <div className='p-container' >
                             <p><b>1. ACCEPTANCE OF TERMS</b></p>

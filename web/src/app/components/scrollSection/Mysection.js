@@ -20,7 +20,8 @@ export default function Mysection({
   totalSections,
   link,
   video,
-  linkSection
+  linkSection,
+  mainHeading
 }) {
   const router = useRouter()
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1000);
@@ -121,8 +122,8 @@ export default function Mysection({
       <div className='section' ref={sectionRef}>
         
         <div className='copy' ref={headlineRef}>
-          {headline && <h1 className="heading">{headline}</h1> }
-          {link && <button onClick={() => router.push(link)} > <div> EXPLORE NOW  </div> <div><Image src={arr} alt='image'/></div> </button>}
+          {headline && (mainHeading ? <h1 className="heading">{headline}</h1> : <h2 className="heading">{headline}</h2>)}
+          {link && <button onClick={() => router.push(link)} > <div> EXPLORE NOW  </div> <div><Image src={arr} alt=''/></div> </button>}
         </div>
         {linkSection && <div className=" home-link-container">
           {/* <div className="link-box"><div className="home-link" ><p>For Portraits</p><h5>Siddhiart.in</h5></div></div> */}
@@ -134,16 +135,16 @@ export default function Mysection({
           <div className="link-box"><div className="home-link" onClick={()=>{router.push('/cookiesPolicy')}}><p>Cookies Policy</p><h5>Cookies Policy</h5></div></div>
         </div>}
         
-        {image &&<Image src={image} layout={`fill`} ref={imageRef} className="image-bg" alt='image'/>}
+        {image &&<Image src={image} layout={`fill`} ref={imageRef} className="image-bg" alt=''/>}
         {video && 
-        <video autoPlay muted loop id="background-video" ref={imageRef} className="image-bg" >
+        <video autoPlay muted loop playsInline id="background-video" ref={imageRef} className="image-bg" >
         <source src={video} type="video/mp4" />
       </video>}
         {showArrow && (
           <button
             className='downarrow center'
             onClick={() => handleGoToNextSection()}
-          > <Image src={arrow} alt="arrow" width={50} height={50}/> </button>
+          > <Image src={arrow} alt='' width={50} height={50}/> </button>
         )}
       </div>
     </>

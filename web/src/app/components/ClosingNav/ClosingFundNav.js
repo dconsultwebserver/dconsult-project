@@ -31,15 +31,15 @@ function ClosingFundNav() {
         <div className='closing-Nav'>
             <div className="closing-nav-container">
                 <div className="row">
-                    <div className="col-2 logo-container" onClick={()=>{router.push('/')}} style={{padding:'0'}}><Image src={logo} height={70} width={200} className='nav-logo f-logo' style={{cursor:'pointer'}} alt='logo'/></div>
+                    <div className="col-2 logo-container" onClick={()=>{router.push('/')}} style={{padding:'0'}}><Image src={logo} height={70} width={200} className='nav-logo f-logo' style={{cursor:'pointer'}} alt='Dhumavati Consulting LLP logo'/></div>
                     <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} >
-        <Image src={blackMenuline} style={{cursor:'pointer'}} className='menu-btn-res' alt='image'/>
+        <Image src={blackMenuline} style={{cursor:'pointer'}} className='menu-btn-res' alt='Open menu'/>
                     </div>
                 </div>
             </div>
             <Modal show={show} fullscreen={true} onHide={() =>setShow(false)} className='fade-modal'>
                 <Modal.Body closeButton>
-                    <div className='modal-Close' onClick={() =>setShow(false)} style={{cursor:'pointer'}}> <Image src={closeBtn} alt='image'/> </div>
+                    <div className='modal-Close' onClick={() =>setShow(false)} style={{cursor:'pointer'}}> <Image src={closeBtn} alt='Close menu'/> </div>
                     <div className="horizontal-nav-container" >
                     <Link className={`link d-flex align-items-center ${pathname === '/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/" onClick={() =>setShow(false)}>HOME</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/aboutUs/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/aboutUs" onClick={() =>setShow(false)}>ABOUT</Link>

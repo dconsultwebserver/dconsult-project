@@ -64,6 +64,7 @@ export default function Home() {
         <div ref={section1}>
           <Mysection
             video='/video/homePage.mp4'
+            mainHeading
             headline={"Financing Growth through Strategic Acquisitions"}
             goToSectionRef={sectionRefs}
             scrollTo={() => scrollTo(section2)}

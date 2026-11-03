@@ -7,14 +7,43 @@ import './fundRising/fund.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+// Business details for Google (structured data), taken from the footer and contact page
+const businessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FinancialService',
+  name: 'Dhumavati Consulting LLP',
+  url: 'https://dconsult.in/',
+  logo: 'https://dconsult.in/images/blogo.png',
+  image: 'https://dconsult.in/images/og-image.jpg',
+  telephone: '+91-8655811111',
+  email: 'd@dconsult.in',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Shop No 2, Agar Bazar, Dadar West',
+    addressLocality: 'Mumbai',
+    addressRegion: 'Maharashtra',
+    addressCountry: 'IN',
+  },
+  areaServed: 'IN',
+}
+
 export const metadata = {
   title: 'Machinery Loans Mumbai | Acquisition Finance & ECB Mumbai - Dhumavati Consulting LLP',
   description: 'Dhumavati Consulting LLP offers Machinery Loans, Acquisition Finance, and ECB consulting in Mumbai to help businesses secure the right funding.',
+  metadataBase: new URL('https://dconsult.in'),
+  // No title/description/url here, so each page's own <title> is used when shared
+  openGraph: {
+    siteName: 'Dhumavati Consulting LLP',
+    locale: 'en_IN',
+    type: 'website',
+    images: [{ url: '/images/og-image.jpg', width: 1200, height: 630, alt: 'Dhumavati Consulting LLP' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/og-image.jpg'],
+  },
   verification: {
     google: '7wMzEd5dleljQIHvMYQWBrBZIInI2VDW4krVu-5Ra8k',
-  },
-  alternates: {
-    canonical: 'https://dconsult.in/',
   },
 }
 
@@ -29,19 +58,11 @@ export default function RootLayout({ children }) {
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-TX8B62P94Y');`}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+        />
         {children}
-        {/* Hidden links for SEO/spider crawling - no visual space */}
-        <div style={{ display: 'none' }}>
-          <a href="/aboutUs" className="float" target="_blank">a</a>
-          <a href="/acquisition-debt" className="float" target="_blank">b</a>
-          <a href="/contact" className="float" target="_blank">c</a>
-          <a href="/machinery-loans" className="float" target="_blank">d</a>
-          <a href="/ecb" className="float" target="_blank">e</a>
-          <a href="/privacyPolicy" className="float" target="_blank">f</a>
-          <a href="/terms&condition" className="float" target="_blank">g</a>
-          <a href="/disclaimers" className="float" target="_blank">h</a>
-          <a href="/cookiesPolicy" className="float" target="_blank">i</a>
-        </div>
       </body>
     </html>
   )
