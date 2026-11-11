@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import dot from '../../../public/images/dot.svg';
 import bg from '../../../public/images/bg.svg';
 import '../aboutUs/about.css';
@@ -150,7 +151,6 @@ function UnlistedStocks() {
 Pre-IPO Shares - Shares provided by companies seeking an IPO.
                                 </li>
                                 <li>Shares issued in private placements.</li>
-                                <li>Shares issued in public offerings.</li>
                                 <li>ESOP Shares - Shares issued under employee stock options.</li>
                                 <li>Shares held by group shareholders of private companies.</li>
                             </ul>
@@ -172,6 +172,34 @@ Pre-IPO Shares - Shares provided by companies seeking an IPO.
                             <li>Higher investment amount as the minimum lot size required to purchase is higher.</li>
                             <li>Only a few dealers are available for transactions.</li>
                         </ul>
+
+                        <div style={{ margin: '3rem 0 1rem 0' }}><h2 className='heading'>How to Buy Unlisted Shares</h2></div>
+                        <ol className="unlisted-list">
+                            <li><strong>Choose a company</strong> and check its latest price and financials (see the company pages above).</li>
+                            <li><strong>Share your demat account details</strong> and complete KYC. You need a demat account, just as for listed shares. Don&apos;t have one? <Link href="/demateAccount/">Open a demat account</Link>.</li>
+                            <li><strong>Agree the price and quantity.</strong> Unlisted shares trade over the counter, so the price is agreed between buyer and seller.</li>
+                            <li><strong>Make the payment</strong> to the seller&apos;s bank account.</li>
+                            <li><strong>Receive the shares</strong> in your demat account, usually within a few working days.</li>
+                        </ol>
+
+                        <div style={{ margin: '3rem 0 1rem 0' }}><h2 className='heading'>Things to Know Before You Invest</h2></div>
+                        <ul className="unlisted-list">
+                            <li><strong>Prices are not on any exchange.</strong> Quotes can differ between dealers, so compare before you buy.</li>
+                            <li><strong>Lock-in after IPO:</strong> if the company lists, shares bought before the IPO are generally locked in for a period (currently six months for most pre-IPO shareholders) before you can sell them on the exchange.</li>
+                            <li><strong>Tax:</strong> gains on unlisted shares are taxed differently from listed shares. Check the current rules with your tax adviser before investing.</li>
+                            <li><strong>No guaranteed listing:</strong> an expected IPO can be delayed or cancelled.</li>
+                        </ul>
+
+                        <div style={{ margin: '3rem 0 1rem 0' }}><h2 className='heading'>Frequently Asked Questions</h2></div>
+                        <div className="unlisted-faq">
+                            <p><strong>Is it legal to buy unlisted shares in India?</strong></p>
+                            <p>Yes. Unlisted shares can be bought and sold legally, and they are held in your demat account like any other shares.</p>
+                            <p><strong>What is the minimum investment?</strong></p>
+                            <p>It depends on the company and the seller. Many unlisted shares are sold in minimum lots, so the minimum amount is often higher than for listed shares.</p>
+                            <p><strong>Can I sell my unlisted shares later?</strong></p>
+                            <p>Yes, but finding a buyer can take time because there is no exchange. If the company lists, you can sell on the stock exchange after any lock-in period ends.</p>
+                        </div>
+                        <p style={{ marginTop: '2rem' }}>Want a current price for <Link href="/nse/">NSE</Link>, <Link href="/ncdex/">NCDEX</Link>, <Link href="/msei/">MSEI</Link>, <Link href="/oyo/">OYO</Link> or <Link href="/polymatech/">Polymatech</Link> unlisted shares? <Link href="/contact/">Contact us</Link>.</p>
                     </div>
                     
                 </div>

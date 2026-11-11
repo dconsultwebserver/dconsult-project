@@ -1,0 +1,42 @@
+/* Dark navy like the slides above, so the white menu stays readable */
+.home-services {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  background: #040F25;
+  color: #e9edf5;
+  display: flex;
+  align-items: center;
+  /* extra right padding keeps clear of the slide dots */
+  padding: 6rem 5rem 3rem 1.5rem;
+}
+.home-services-inner { max-width: 1100px; margin: 0 auto; }
+.home-services h2 { font-size: 1.8rem; color: #fff; margin-bottom: 1rem !important; }
+.home-services p.home-services-intro { color: #c9d2e3; font-size: 1rem; line-height: 1.7; max-width: 800px; margin-bottom: 2rem; }
+.home-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.home-service-card {
+  display: block;
+  background: #0b1a38;
+  border: 1px solid #1d2c4d;
+  border-top: 3px solid #E7B905;
+  border-radius: 8px;
+  padding: 1.2rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background .2s;
+}
+.home-service-card:hover { background: #12244a; color: inherit; }
+.home-service-card h3 { font-size: 1.05rem; color: #fff; margin-bottom: .5rem !important; }
+.home-service-card p { font-size: .9rem; line-height: 1.6; margin: 0; color: #b9c3d6; }
+.home-services p.home-services-contact { color: #c9d2e3; font-size: .95rem; line-height: 1.7; }
+.home-services-contact a { color: #E7B905; }
+
+@media (max-width: 600px) {
+  .home-services { padding: 5rem 2.5rem 2rem 1rem; }
+  .home-services p.home-services-intro { font-size: .95rem; }
+  .home-services h2 { font-size: 1.4rem; }
+}

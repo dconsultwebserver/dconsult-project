@@ -1,6 +1,7 @@
 'use client'
 import { useRef, useEffect , useState} from "react";
 import Mysection from "../scrollSection/Mysection";
+import HomeServices from "../homeServices/HomeServices";
 import client from "@/app/sanity/client";
 import DisclaimerPopup from "../DisclaimerPopup/DisclaimerPopup";
 
@@ -114,7 +115,7 @@ export default function Home() {
           />
         </div>
         <div ref={section5}>
-        
+          <HomeServices />
         </div>
       </div>
     </div>

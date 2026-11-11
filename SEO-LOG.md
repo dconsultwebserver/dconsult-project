@@ -162,6 +162,23 @@ Pull requests are built and checked but never deployed. Tested locally: clean in
 
 File: `web/src/app/billDiscounting/Business.js`.
 
+### 2026-11-11: More content on Private Equity, homepage and Unlisted Stocks
+
+| Page | Words before | Words after |
+|---|---|---|
+| Homepage | ~73 | ~245 |
+| Private Equity | ~122 | ~470 |
+| Unlisted Stocks | ~244 | ~535 |
+| Bill Discounting (earlier today) | ~101 | ~600 |
+
+- **Homepage:** new section after the full-screen slides (in the empty fifth slot, so the slides are unchanged): "Business Finance and Investment Advisory in Mumbai", a short intro, a card linking to each of the 7 services, and the address, phone and email. Same dark navy as the slides; checked on desktop and phone.
+- **Private Equity:** what private equity is, types of funding (table), how we help raise capital, FAQs, links to related services. Fixed typo "Mezzanine capita".
+- **Unlisted Stocks:** how to buy (5 steps), things to know (pricing, post-IPO lock-in, tax, IPO risk), FAQs, links to each company page and the demat page. Removed the incorrect bullet "Shares issued in public offerings" (those are listed shares).
+- All new text is general information with no rates, returns or company claims. Business owner should review.
+- More internal links between pages (helps Google understand and rank the service pages).
+
+Files: `web/src/app/privateEqity/Equity.js`, `web/src/app/unlisted-stocks/page.js`, `web/src/app/components/homePage/HomePage.js`, new `web/src/app/components/homeServices/`.
+
 ### Still open
 
 - Descriptions written by us should be checked by the business owner for accuracy.
