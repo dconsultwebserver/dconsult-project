@@ -115,7 +115,7 @@ export default function Footer() {
                                     <p>@ Coyright 2023. All rights reserved.</p>
                                 </div>
                                 <div className="col-6 develop-by" >
-                                    <p>Website Design & Developed By <a target='_blank' href="https://pixeldesignindia.com/">Pixel Design India</a> </p>
+                                    <p>Website Design & Developed By <a target='_blank' rel='noopener noreferrer' href="https://pixeldesignindia.com/">Pixel Design India</a> </p>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +137,7 @@ export default function Footer() {
                                     <p>@ Coyright 2024. All rights reserved.</p>
                                 </div>
                                 <div className="c-right develop-by" >
-                                    <p>Website Design & Developed By <a target='_blank' href="https://pixeldesignindia.com/">Pixel Design India</a> </p>
+                                    <p>Website Design & Developed By <a target='_blank' rel='noopener noreferrer' href="https://pixeldesignindia.com/">Pixel Design India</a> </p>
                                 </div>
 
                         </div>

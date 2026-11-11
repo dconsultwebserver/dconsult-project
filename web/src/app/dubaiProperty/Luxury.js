@@ -57,7 +57,6 @@ function page() {
             description
         }`);
                 setData(luxuriousData[0]);
-                console.log(luxuriousData[0]);
             } catch (error) {
                 console.error('Error fetching data from Sanity:', error);
             }
@@ -110,7 +109,6 @@ function page() {
             `)
             .then((data) => {
 
-                console.log(data);
                 setNewsCard(data);
             })
             .catch(console.error);

@@ -120,6 +120,28 @@ Files (renamed): `dubaiProperty/properties/page.js` → `Property.js`, `dubaiPro
 
 - `/fundRising/` shows only the footer: no content. Set to stay out of Google and removed from the sitemap. **To do:** add content, then remove the `robots` block in `web/src/app/fundRising/page.js` and add it back to `sitemap.js`.
 
+### 2026-11-11: Security check, faster caching, automatic deploys
+
+**Security check** (static site: no login, database or uploads, so the checks that apply are secrets, frontend, headers, packages and CI):
+- Secrets: none in the code or git history.
+- Added security headers in `web/public/.htaccess`: HSTS, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy.
+- Removed 7 debug `console.log` lines; added `rel="noopener noreferrer"` to the 2 external footer links.
+- Only raw-HTML use is our own business-details script (fixed text, safe).
+- Packages: `npm audit` reports issues, mostly in build tools. The flagged `next` issues affect Next's server, which this site doesn't use (it's uploaded as plain files). Upgrading Next is still worth planning.
+- Not added: a Content-Security-Policy (needs careful testing with Google Analytics, Sanity, EmailJS and Formspree).
+
+**Speed:** `.htaccess` now tells browsers to cache build files for a year, images and video for 30 days, and always re-check pages. Faster repeat visits help page-speed scores.
+
+Tested all `.htaccess` rules on a local Apache server: www redirect, `/index.html` redirect, real 404, `/nse` → `/nse/`, headers and caching all work.
+
+**Automatic deploys:** added `.github/workflows/deploy.yml`. On every push to `main` (or a manual run, or a Sanity content change), GitHub:
+1. scans for leaked secrets,
+2. installs and builds the site, checks the output,
+3. uploads `web/out/` to Hostinger by FTPS (only changed files).
+Pull requests are built and checked but never deployed. Tested locally: clean install and build on Node 20 (same as GitHub) pass.
+
+**Needs the repo owner (admin):** add secrets `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` and variable `FTP_SERVER_DIR` in GitHub. Until then the deploy step stops with a clear message and nothing is uploaded.
+
 ### Still open
 
 - Descriptions written by us should be checked by the business owner for accuracy.

@@ -53,7 +53,6 @@ function News({ slug: slugProp }) {
             publishBy,
             date}
       `);
-          console.log(data[0]);
           setPropertyData(data[0]);
         } catch (error) {
           console.error(error);

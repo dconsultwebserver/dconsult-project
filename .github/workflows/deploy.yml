@@ -1,0 +1,103 @@
+# Builds the website and uploads it to Hostinger.
+#
+# Runs on every push to main, when started by hand (Actions tab -> Run workflow),
+# or when Sanity content changes (via a webhook that sends a "sanity-content-update" event).
+#
+# Needs these set by the repo owner in Settings -> Secrets and variables -> Actions:
+#   Secrets:   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD   (from Hostinger hPanel -> Files -> FTP Accounts)
+#   Variables: FTP_SERVER_DIR  (folder the site lives in on the server, ending in "/", e.g. "public_html/")
+#              FTP_PROTOCOL    (optional: "ftps" by default, set to "ftp" only if FTPS doesn't connect)
+
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+  repository_dispatch:
+    types: [sanity-content-update]
+
+permissions:
+  contents: read
+
+# Never run two deploys at the same time; a newer one waits for the older one
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  secret-scan:
+    name: Secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: trufflesecurity/trufflehog@ea68ca03c865c5f324e86e849ced20ed3cf9dbbb # v3.99.8
+        with:
+          extra_args: --only-verified
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - name: Dependency audit (report only)
+        run: npm audit --omit=dev || true
+      - run: npm run build
+      - name: Check the build output
+        run: |
+          test -f out/index.html
+          test -f out/sitemap.xml
+          test -f out/.htaccess
+          if grep -rl "cosmotradelive" out --include=*.html; then
+            echo "::error::Built pages still point to cosmotradelive.in"
+            exit 1
+          fi
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: site
+          path: web/out
+          include-hidden-files: true
+          retention-days: 7
+
+  deploy:
+    name: Deploy to Hostinger
+    needs: [secret-scan, build]
+    # Only from main, never from pull requests
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Check deploy settings
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_SERVER_DIR: ${{ vars.FTP_SERVER_DIR }}
+        run: |
+          if [ -z "$FTP_SERVER" ] || [ -z "$FTP_SERVER_DIR" ]; then
+            echo "::error::FTP secrets or FTP_SERVER_DIR are not set. See the top of .github/workflows/deploy.yml."
+            exit 1
+          fi
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: site
+          path: out
+      - uses: SamKirkland/FTP-Deploy-Action@3a9c65ae0fc12ac924ccef8afc26941cc43aad0b # v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
+          local-dir: ./out/
+          server-dir: ${{ vars.FTP_SERVER_DIR }}

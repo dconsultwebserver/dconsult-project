@@ -21,7 +21,6 @@ const word = txt.split(" ")
                 {word.map((w,i)=>{
                 const start =i/word.length
                 const end =start+(1/word.length)
-                console.log(start, end)
                 return (
                     <Word key={i} className='word' range={[start,end]} progress={scrollYProgress}>{w}</Word>
                 )})}

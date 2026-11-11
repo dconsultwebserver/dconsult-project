@@ -12,3 +12,26 @@ ErrorDocument 404 /404.html
   RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?]
   RewriteRule ^(.*/)?index\.html$ /$1 [L,R=301]
 </IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# Caching (faster repeat visits, which helps page-speed scores)
+<IfModule mod_headers.c>
+  # All JS/CSS is Next.js build output with a unique hash in the name, so it can be cached for a year
+  <FilesMatch "\.(js|css)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|svg|webp|gif|ico|mp4|woff2?)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(html|txt|xml)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>

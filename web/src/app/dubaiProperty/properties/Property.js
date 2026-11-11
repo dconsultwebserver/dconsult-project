@@ -81,7 +81,6 @@ function Property({ slug: slugProp }) {
           "name":author -> name, 
         } 
       `);
-          console.log(data[0]);
           setPropertyData(data[0]);
         } catch (error) {
           console.error(error);

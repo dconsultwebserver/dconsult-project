@@ -12,7 +12,6 @@ export default function Home() {
         const home = await client.fetch(`*[_type == "home"] {
           heading,
         }`);
-        console.log(home);
         setData(home);
       } catch (error) {
         console.error('Error fetching data from Sanity:', error);
