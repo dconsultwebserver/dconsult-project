@@ -142,6 +142,26 @@ Pull requests are built and checked but never deployed. Tested locally: clean in
 
 **Needs the repo owner (admin):** add secrets `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` and variable `FTP_SERVER_DIR` in GitHub. Until then the deploy step stops with a clear message and nothing is uploaded.
 
+### 2026-11-11: Content work starts, keyword research and Bill Discounting page
+
+**Research (Google, Nov 2026):** broad searches like "machinery loan Mumbai" and "bill discounting Mumbai" are led by big lenders (Bajaj Finserv, Oxyzo) and directories (IndiaMART). Realistic targets for us are more specific searches where a consultant fits, plus listings on those directories.
+
+**Target search per page (first set):**
+
+| Page | Main target search |
+|---|---|
+| Bill Discounting | bill discounting Mumbai / invoice discounting for MSMEs |
+| Machinery Loans | machinery loan consultant Mumbai |
+| Acquisition Debt | acquisition finance advisory Mumbai |
+| ECB | ECB advisory India / external commercial borrowing consultant |
+| Unlisted Stocks | buy unlisted shares Mumbai |
+| NSE, NCDEX, MSEI, OYO, Polymatech | buy <company> unlisted shares |
+| Private Equity | private equity advisory Mumbai |
+
+**Bill Discounting page rewritten:** it showed placeholder text ending in "..." (about 100 words). Now about 600 words in the same design as Machinery Loans: how it works, types (table), benefits, eligibility and documents, FAQs, and links to related services. Information is general; no rates or company claims. Business owner should review.
+
+File: `web/src/app/billDiscounting/Business.js`.
+
 ### Still open
 
 - Descriptions written by us should be checked by the business owner for accuracy.
